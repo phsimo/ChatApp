@@ -6,6 +6,8 @@ Find your answer here in this project. Out of my curiosity, and I also got this 
 ##Strategy/Algorithm
 First, the main idea is to have a server that orchestrates and directs the flows of messages between clients. Note that this is not a peer-to-peer connection, therefore all messages have to go through the server. Server will determine which client to forward the message to. The main challenge is to manage all the threads that handle receiving and sending messages. 
 
+![alt tag](https://github.com/phsimo/ChatApp/blob/master/Chat%20Architecture.jpg)
+
 ###Server side:
 1) Server has a thread, in which it is continuously listening and waiting for connections from new clients.
 ``` 
