@@ -58,7 +58,10 @@ while(true) {
 			}
 ```
 
+###GUI
+A server has a JFrame that stores the list of all the online clients
 
+A client has two JFrames: one to show the list of other online clients, another for chatting. The chatting frame (aka MessageFrame) has two text fields: One is to show the messages (non-editable), and the other is for entering text.
 
 
 
