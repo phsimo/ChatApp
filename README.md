@@ -18,7 +18,9 @@ while(true) {
 	
 ```
 2) The Client created in step 1) (in a separate thread) will continuously listen to its incoming stream (InputStream) of its socket. Whenever a message is received from the client (which is encapsulated in an XML string), the server will detect the type of the message. There are 2 types of messages:
+
 1. Message indicates that the client is leaving, thus disconnecting from the server.
+
 2. A text message that the client wants to send to another client.
 
 If the message is a disconnecting message, the server has inform all the client about a new updated list of clients.
