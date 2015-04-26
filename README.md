@@ -10,7 +10,7 @@ First, the main idea is to have a server that orchestrates and directs the flows
 
 ###Server side:
 1) Server has a thread, in which it is continuously listening and waiting for connections from new clients.
-``` 
+```java
 while(true) {
 			Socket socket = serverSocket.accept();
 			//Create a new client using this returned socket in a new threat, say, Client thread.
@@ -36,27 +36,17 @@ Similar to the server, a client has a separate thread to listen to the incoming 
 
 * A message telling that the client is currently continueing chatting with someone who just left the chat room.
 
-```
+```java
 while(true) {
-			
 				try{  
-				
 					reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-					
 					 s=reader.readLine();
-					 
 					 if(s!=null) {
-					 
 						 new XMLProcessing(s,client); // process the received messages	
-						 
 					 }
-					 
 				}catch(Exception e) {
-				
 					e.printStackTrace();
-					
 				}
-				
 			}
 ```
 
